@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-calculator/static/css/main.627c6537.css",
+    "main.js": "/react-calculator/static/js/main.10926886.js",
+    "static/media/TexasInstruments-Logo.svg": "/react-calculator/static/media/TexasInstruments-Logo.f69009bfc57d4d5e2f6f50aac9ccf7e6.svg",
+    "static/media/keyPress.mp3": "/react-calculator/static/media/keyPress.7052ae3db64a46d2a6fd.mp3",
+    "static/media/DS-Digital-Bold.woff": "/react-calculator/static/media/DS-Digital-Bold.746ffb04a6d8f3bff3a5.woff",
+    "index.html": "/react-calculator/index.html",
+    "main.627c6537.css.map": "/react-calculator/static/css/main.627c6537.css.map",
+    "main.10926886.js.map": "/react-calculator/static/js/main.10926886.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.627c6537.css",
+    "static/js/main.10926886.js"
+  ]
+}
