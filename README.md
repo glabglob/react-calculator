@@ -2,9 +2,7 @@
 
 ![alt text](./src/img//calcPreview.jpg)
 
-If you  want to try it,  follow this link:
-
-[LINK](https://glabglob.github.io/react-calculator/)
+If you  want to try it,  follow this link: [LINK](https://glabglob.github.io/react-calculator/)
 
 ## Usage
 
