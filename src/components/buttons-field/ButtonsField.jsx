@@ -1,4 +1,5 @@
-import CalculatorButton from '../calculator-button/CalculatorButton'
+import { useKeyPress } from '../hooks/useKeyPress';
+import CalculatorButton from '../calculator-button/CalculatorButton';
 
 import './ButtonsField.scss';
 
@@ -7,95 +8,79 @@ const ButtonsField = ({ addDigit, addOperator, clearDisplay, addPoint, calculate
     return (
         <div className="buttons__field">
             <div className="left__side">
-                <CalculatorButton eachButton={'key__c'}
+                <CalculatorButton eachButton={useKeyPress('Delete', 'key__c') ? 'key__c active' : 'key__c'}
                     buttonColor={'key__dark'}
                     keyContent={'C'}
-                    handleacAction={() => clearDisplay()}
+                    handleAction={() => clearDisplay()}
                 />
-                <CalculatorButton eachButton={'key__ce'}
+                <CalculatorButton eachButton={useKeyPress('Backspace', 'key__ce') ? 'key__ce active' : 'key__ce'}
                     buttonColor={'key__dark'}
                     keyContent={'CE'}
-                    handleacAction={() => clearLastInputValue()}
+                    handleAction={() => clearLastInputValue()}
                 />
-                <CalculatorButton eachButton={'key__persent'}
+                <CalculatorButton eachButton={useKeyPress('%', 'key__persent') ? 'key__persent active' : 'key__persent'}
                     buttonColor={'key__dark'}
                     keyContent={'%'}
-                    handleacAction={() => addPercent()}
+                    handleAction={() => addPercent()}
                 />
             </div>
             <div className="center__side">
-                <CalculatorButton eachButton={'key__7'}
+                <CalculatorButton eachButton={useKeyPress('7', 'key__7') ? 'key__7 active' : 'key__7'}
                     keyContent={'7'}
-                    handleacAction={() => addDigit(7)}
-                />
-                <CalculatorButton eachButton={'key__8'}
+                    handleAction={() => addDigit(7)} />
+                <CalculatorButton eachButton={useKeyPress('8', 'key__8') ? 'key__8 active' : 'key__8'}
                     keyContent={'8'}
-                    handleacAction={() => addDigit(8)}
-                />
-                <CalculatorButton eachButton={'key__9'}
+                    handleAction={() => addDigit(8)} />
+                <CalculatorButton eachButton={useKeyPress('9', 'key__9') ? 'key__9 active' : 'key__9'}
                     keyContent={'9'}
-                    handleacAction={() => addDigit(9)}
-                />
-                <CalculatorButton eachButton={'key__4'}
+                    handleAction={() => addDigit(9)} />
+                <CalculatorButton eachButton={useKeyPress('4', 'key__4') ? 'key__4 active' : 'key__4'}
                     keyContent={'4'}
-                    handleacAction={() => addDigit(4)}
-                />
-                <CalculatorButton eachButton={'key__5'}
+                    handleAction={() => addDigit(4)} />
+                <CalculatorButton eachButton={useKeyPress('5', 'key__5') ? 'key__5 active' : 'key__5'}
                     keyContent={'5'}
-                    handleacAction={() => addDigit(5)}
-                />
-                <CalculatorButton eachButton={'key__6'}
+                    handleAction={() => addDigit(5)} />
+                <CalculatorButton eachButton={useKeyPress('6', 'key__6') ? 'key__6 active' : 'key__6'}
                     keyContent={'6'}
-                    handleacAction={() => addDigit(6)}
-                />
-                <CalculatorButton eachButton={'key__1'}
+                    handleAction={() => addDigit(6)} />
+                <CalculatorButton eachButton={useKeyPress('1', 'key__1') ? 'key__1 active' : 'key__1'}
                     keyContent={'1'}
-                    handleacAction={() => addDigit(1)}
-                />
-                <CalculatorButton eachButton={'key__2'}
+                    handleAction={() => addDigit(1)} />
+                <CalculatorButton eachButton={useKeyPress('2', 'key__2') ? 'key__2 active' : 'key__2'}
                     keyContent={'2'}
-                    handleacAction={() => addDigit(2)}
-                />
-                <CalculatorButton eachButton={'key__3'}
+                    handleAction={() => addDigit(2)} />
+                <CalculatorButton eachButton={useKeyPress('3', 'key__3') ? 'key__3 active' : 'key__3'}
                     keyContent={'3'}
-                    handleacAction={() => addDigit(3)}
-                />
-                <CalculatorButton eachButton={'key__0'}
+                    handleAction={() => addDigit(3)} />
+                <CalculatorButton eachButton={useKeyPress('0', 'key__0') ? 'key__0 active' : 'key__0'}
                     keyContent={'0'}
-                    handleacAction={() => addDigit(0)}
-                />
-                <CalculatorButton eachButton={'key__point'}
+                    handleAction={() => addDigit(0)} />
+                <CalculatorButton eachButton={useKeyPress('.', 'key__point') ? 'key__point active' : 'key__point'}
                     buttonColor={'key__yellow'}
                     keyContent={'.'}
-                    handleacAction={() => addPoint()}
-                />
+                    handleAction={() => addPoint()} />
             </div>
             <div className="right__side">
-                <CalculatorButton eachButton={'key__divide'}
+                <CalculatorButton eachButton={useKeyPress('/', 'key__divide') ? 'key__divide active' : 'key__divide'}
                     buttonColor={'key__dark'}
                     keyContent={'÷'}
-                    handleacAction={() => addOperator('÷')}
-                />
-                <CalculatorButton eachButton={'key__multiply'}
+                    handleAction={() => addOperator('÷')} />
+                <CalculatorButton eachButton={useKeyPress('*', 'key__multiply') ? 'key__multiply active' : 'key__multiply'}
                     buttonColor={'key__dark'}
                     keyContent={'x'}
-                    handleacAction={() => addOperator('x')}
-                />
-                <CalculatorButton eachButton={'key__minus'}
+                    handleAction={() => addOperator('x')} />
+                <CalculatorButton eachButton={useKeyPress('-', 'key__minus') ? 'key__minus active' : 'key__minus'}
                     buttonColor={'key__dark'}
                     keyContent={'-'}
-                    handleacAction={() => addOperator('-')}
-                />
-                <CalculatorButton eachButton={'key__equals'}
+                    handleAction={() => addOperator('-')} />
+                <CalculatorButton eachButton={useKeyPress('Enter', 'key__equals') ? 'key__equals active' : 'key__equals'}
                     buttonColor={'key__yellow'}
                     keyContent={'='}
-                    handleacAction={() => calculateResult()}
-                />
-                <CalculatorButton eachButton={'key__plus'}
+                    handleAction={() => calculateResult()} />
+                <CalculatorButton eachButton={useKeyPress('+', 'key__plus') ? 'key__plus active' : 'key__plus'}
                     buttonColor={'key__dark'}
                     keyContent={'+'}
-                    handleacAction={() => addOperator('+')}
-                />
+                    handleAction={() => addOperator('+')} />
             </div>
         </div>
     )

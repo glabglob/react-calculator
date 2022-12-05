@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { math, limitedEvaluate, formatOptions } from '../math-config/mathConfig';
+import { playAudio } from '../key-press-audio/keyPressAudio';
 
 import CalculatorDisplay from '../calculator-display/CalculatorDisplay';
 import ButtonsField from '../buttons-field/ButtonsField';
@@ -11,17 +12,25 @@ const Calculator = () => {
     const [displayValue, setDisplayValue] = useState('0');
 
     const addDigit = (digit) => {
+        playAudio();
+
         setDisplayValue(displayValue => displayValue === '0' ? math.format(digit) : displayValue + math.format(digit));
     }
 
     const clearDisplay = () => {
+        playAudio();
+
         setDisplayValue(displayValue => displayValue.length === 1 ? '' : displayValue = '');
     }
     const clearLastInputValue = () => {
+        playAudio();
+
         setDisplayValue(displayValue => displayValue.length === 1 ? '' : displayValue.slice(0, -1));
     }
 
     const addOperator = (operator) => {
+        playAudio();
+
         if (operator === '-') {
             setDisplayValue(displayValue => displayValue.substring(-1) === '.' ? displayValue : displayValue + operator);
         } else {
@@ -32,6 +41,7 @@ const Calculator = () => {
 
 
     const addPoint = () => {
+        playAudio();
         // eslint-disable-next-line
         if (/[\+\-x÷]$/.test(displayValue)) {
             return setDisplayValue(displayValue => displayValue + '0.');
@@ -48,6 +58,8 @@ const Calculator = () => {
     }
 
     const addPercent = () => {
+        playAudio();
+
         // eslint-disable-next-line
         if (/[\+\-x÷]$/.test(displayValue)) {
             return setDisplayValue(displayValue => displayValue + '0%');
@@ -62,6 +74,8 @@ const Calculator = () => {
     }
 
     const calculateResult = () => {
+        playAudio();
+
         let result;
 
         let convertOperators = displayValue.replace(/x/g, '*').replace(/÷/g, '/');
