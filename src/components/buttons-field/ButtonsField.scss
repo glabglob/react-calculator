@@ -1,0 +1,41 @@
+.buttons__field {
+    width: 550px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    .left__side {
+        display: flex;
+        flex-direction: column;
+        height: 225px;
+        width: 75px;
+        border-radius: 12px;
+        background-color: rgba(139, 135, 124, 1);
+        border: 2px solid #382b22;
+    }
+
+    .center__side {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        height: 295px;
+        width: 225px;
+        border-radius: 12px;
+        border: 2px solid #382b22;
+        background-color: rgba(139, 135, 124, 1);
+    }
+
+    .right__side {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 150px;
+        height: 225px;
+        border-radius: 12px;
+        border: 2px solid #382b22;
+        background-color: rgba(139, 135, 124, 1);
+        align-content: flex-start;
+    }
+}
