@@ -1,5 +1,6 @@
-import './appLogo.scss';
 import Logo from './TexasInstruments-Logo.svg';
+
+import './appLogo.scss';
 
 const AppLogo = () => {
     return (
