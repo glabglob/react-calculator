@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Digital";
+  src: url("./fonts/DS-Digital-Bold.woff");
+}
+body{
+  font-family: "Digital";
+}
